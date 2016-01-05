@@ -15,6 +15,7 @@ RUN apk update \
     && sed -i 's/hostname $opts/# hostname $opts/g' /etc/init.d/hostname \
     # can't mount tmpfs since not privileged
     && sed -i 's/mount -t tmpfs/# mount -t tmpfs/g' /lib/rc/sh/init.sh \
+    # install open-vm-tools
     && apk add --no-cache open-vm-tools \
     && rc-update add open-vm-tools
 
