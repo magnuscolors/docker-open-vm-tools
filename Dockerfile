@@ -15,8 +15,6 @@ RUN apk update \
     && sed -i 's/hostname $opts/# hostname $opts/g' /etc/init.d/hostname \
     # can't mount tmpfs since not privileged
     && sed -i 's/mount -t tmpfs/# mount -t tmpfs/g' /lib/rc/sh/init.sh \
-    # can't do cgroups
-    # && sed -i 's/cgroup_add_service /# cgroup_add_service /g' /lib/rc/sh/openrc-run.sh
     && apk add --no-cache open-vm-tools \
     && rc-update add open-vm-tools
 
