@@ -1,9 +1,9 @@
-FROM alpine:latest
-MAINTAINER rijalati@gmail.com
+FROM debian:latest
+MAINTAINER it-operations@boerse-go.de
 
-RUN apk update \
+RUN apt-get update -y \
     # install open-vm-tools
-    && apk add --no-cache open-vm-tools
+    && apt-get install -y open-vm-tools
 
 VOLUME [ "/sys/fs/cgroup" ]
 CMD ["/usr/bin/vmtoolsd"]
