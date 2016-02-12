@@ -1,5 +1,5 @@
 # docker-open-vm-tools
-A minimal container to run open-vm-tools
+A Debian lastest based Docker container running open-vm-tools only on VMware hosted CoreOS instances 
 
 ## From cloud-config
 ```
