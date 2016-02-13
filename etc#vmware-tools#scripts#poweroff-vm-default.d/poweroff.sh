@@ -1,1 +1,1 @@
-/usr/bin/systemctl shutdown
+/bin/systemctl poweroff
