@@ -1,6 +1,8 @@
 # docker-open-vm-tools
 A Debian lastest based Docker container running open-vm-tools only on VMware hosted CoreOS instances 
 
+Reboot, Poweroff, etc are working since systemctl inside the container talks to systemd on the docker host.
+
 ## From cloud-config
 ```
 #cloud-config
