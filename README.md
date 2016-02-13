@@ -1,7 +1,7 @@
 # docker-open-vm-tools
 A Debian latest based Docker container running open-vm-tools only on VMware hosted CoreOS instances. We PXE boot our CoreOS systems - the PXE image does not contain the open-vm-tools.
 
-Reboot, Poweroff, etc are working since systemctl as the container talks to systemd on the docker host.
+Reboot, Poweroff, etc are working as systemctl within the container talks to systemd on the docker host.
 
 The vSphere client is aware of the used IPs and DNS names due to the --net=host parameter.
 
