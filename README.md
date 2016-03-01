@@ -20,7 +20,6 @@ coreos:
         ConditionVirtualization=vmware
         [Service]
         Restart=always
-        ExecStartPre=-/usr/bin/docker rm open-vm-tools
         ExecStart=/usr/bin/docker run --rm --net=host -v /run/systemd:/run/systemd --name open-vm-tools godmodelabs/open-vm-tools
         ExecStop=-/usr/bin/docker stop open-vm-tools
 ```
