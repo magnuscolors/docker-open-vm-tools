@@ -9,6 +9,8 @@ RUN apt-get update -y &&\
     # remove this script to get a zero returncode since ifup etc. are missing in the base image
     ## this is required for a graceful shutdown
     rm /etc/vmware-tools/scripts/vmware/network &&\
+    echo '[vmbackup]' >> /etc/vmware-tools/tools.conf &&\
+    echo 'enableSyncDriver = false' >> /etc/vmware-tools/tools.conf &&\
     # Cleanup after install
     apt-get clean &&\
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
